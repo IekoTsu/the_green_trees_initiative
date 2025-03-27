@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Flood';
+  src: url(/assets/fonts/Flood-Std-Regular.otf);
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url(/assets/fonts/Inter.ttf);
+}
+
+@theme {
+  --font-flood: 'Flood';
+  --font-inter: 'Inter';
+  --text-2xl: 22px;
+  --color-midnight: #354463;
+  --color-lime-styled: #C1F7D5;
+}
+
+@layer components {
+
+  .styled-title{
+    @apply text-7xl;
+    font-family: 'Flood';
+  }
+
+  .btn{
+    @apply flex justify-center items-center px-[30px] py-2.5 rounded-3xl font-bold text-lg text-[#354463] bg-[#C1F7D5] duration-300 ease-in-out;
+  }
+
+  .btn:hover{
+    @apply text-[#C1F7D5] bg-[#354463];
+  }
+
+  .btn-invert{
+    color: #C1F7D5;
+    background-color: #354463;
+  }
+
+  .btn-invert:hover{
+    background-color: #C1F7D5;
+  } 
+
+  .text-absolute{
+    @apply absolute top-0 translate-y-[-50%] px-[30px] py-2.5 bg-white text-midnight md:px-12;
+  }
+
+  .text-card{
+    @apply px-[30px] py-2.5 text-[#354463] bg-white md:px-12;
+  }
+
+  .text-card-invert{
+    @apply text-white bg-[#354463];
+  }
+
+  .info-card{
+    div{
+      @apply flex justify-between items-center w-full gap-4;
+    }
+  }
+
+}
